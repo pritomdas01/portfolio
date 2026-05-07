@@ -90,16 +90,32 @@ export default function Contact() {
       </div>
 
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.5 }}
-        className="mt-32 pt-8 border-t border-white/[0.05] text-center"
-      >
-        <span className="text-white/20 text-sm">made by </span>
-        <span className="text-violet-400 font-semibold tracking-wide">Pritom</span>
-        <span className="text-violet-400">.</span>
-      </motion.div>
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.8, delay: 0.2 }}
+  className="mt-32 pt-12 pb-8 border-t border-white/[0.05] flex flex-col items-center gap-6"
+>
+  {/* সোশ্যাল লিঙ্কস - আপনার থিমের সাথে ম্যাচিং */}
+  <div className="flex gap-8">
+    <a href="https://github.com/pritomdas01" target="_blank" className="text-white/20 hover:text-violet-400 transition-all duration-300 text-xs tracking-widest uppercase">Github</a>
+    <a href="#" className="text-white/20 hover:text-violet-400 transition-all duration-300 text-xs tracking-widest uppercase">LinkedIn</a>
+    <a href="#" className="text-white/20 hover:text-violet-400 transition-all duration-300 text-xs tracking-widest uppercase">Twitter</a>
+  </div>
+
+  {/* মেইন টেক্সট */}
+  <div className="text-center">
+    <span className="text-white/20 text-sm tracking-wide">made by </span>
+    <span className="text-white font-bold tracking-tight text-lg">
+      Pritom<span className="text-violet-500">.</span>
+    </span>
+  </div>
+
+  {/* ছোট কপিরাইট লাইন */}
+  <p className="text-[10px] text-white/10 tracking-[0.3em] uppercase">
+    © 2026 All Rights Reserved
+  </p>
+</motion.div>
     </section>
   );
 }
