@@ -97,7 +97,7 @@ export default function Contact() {
         className="mt-32 pt-8 border-t border-white/[0.05] text-center"
       >
         <span className="text-white/20 text-sm">made by </span>
-        <span className="text-violet-400 font-semibold tracking-wide">pritom</span>
+        <span className="text-violet-400 font-semibold tracking-wide">Pritom</span>
         <span className="text-violet-400">.</span>
       </motion.div>
     </section>
