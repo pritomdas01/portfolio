@@ -31,6 +31,8 @@ export default function Contact() {
           </p>
           <div className="space-y-4">
             
+            {/* ফিক্স করা ইমেল লিঙ্ক */}
+            <a
               href="mailto:pritomdas@example.com"
               className="flex items-center gap-4 text-white/60 hover:text-violet-400 transition-colors group"
             >
@@ -40,6 +42,8 @@ export default function Contact() {
               pritomdas@example.com
             </a>
             
+            {/* ফিক্স করা গিটহাব লিঙ্ক */}
+            <a
               href="https://github.com/pritomdas01"
               target="_blank"
               rel="noopener noreferrer"
