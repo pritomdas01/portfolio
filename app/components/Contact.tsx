@@ -56,7 +56,7 @@ export default function Contact() {
             </a>
           </div>
         </motion.div>
-
+         {/* Footer  */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -93,25 +93,36 @@ export default function Contact() {
   initial={{ opacity: 0, y: 20 }}
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true }}
-  transition={{ duration: 0.8, delay: 0.2 }}
-  className="mt-32 pt-12 pb-8 border-t border-white/[0.05] flex flex-col items-center gap-6"
+  transition={{ delay: 0.5, duration: 0.8 }}
+  className="mt-32 pt-12 pb-8 border-t border-white/[0.05] flex flex-col items-center gap-4"
 >
-  {/* সোশ্যাল লিঙ্কস - আপনার থিমের সাথে ম্যাচিং */}
-  <div className="flex gap-8">
-    <a href="https://github.com/pritomdas01" target="_blank" className="text-white/20 hover:text-violet-400 transition-all duration-300 text-xs tracking-widest uppercase">Github</a>
-    <a href="#" className="text-white/20 hover:text-violet-400 transition-all duration-300 text-xs tracking-widest uppercase">LinkedIn</a>
-    <a href="#" className="text-white/20 hover:text-violet-400 transition-all duration-300 text-xs tracking-widest uppercase">Twitter</a>
+  {/* সোশ্যাল লিঙ্কস */}
+  <div className="flex gap-8 mb-2">
+    <a 
+      href="https://github.com/pritomdas01" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="text-white/20 hover:text-violet-400 transition-all duration-300 text-xs tracking-widest uppercase"
+    >
+      Github
+    </a>
+    <a 
+      href="#" 
+      className="text-white/20 hover:text-violet-400 transition-all duration-300 text-xs tracking-widest uppercase"
+    >
+      LinkedIn
+    </a>
   </div>
 
-  {/* মেইন টেক্সট */}
+  {/* আপনার নতুন টেক্সট ফরম্যাট */}
   <div className="text-center">
-    <span className="text-white/20 text-sm tracking-wide">made by </span>
+    <span className="text-white/20 text-sm tracking-wide">Designed & Built by </span>
     <span className="text-white font-bold tracking-tight text-lg">
       Pritom<span className="text-violet-500">.</span>
     </span>
   </div>
 
-  {/* ছোট কপিরাইট লাইন */}
+  {/* কপিরাইট ইয়ার */}
   <p className="text-[10px] text-white/10 tracking-[0.3em] uppercase">
     © 2026 All Rights Reserved
   </p>
