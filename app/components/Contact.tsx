@@ -27,7 +27,7 @@ export default function Contact() {
           className="space-y-6"
         >
           <p className="text-white/50 text-lg leading-relaxed">
-            Have a project in mind or want to collaborate? Drop me a message and I'll get back to you soon.
+            Have a project in mind or want to collaborate? Drop me a message and I will get back to you soon.
           </p>
           <div className="space-y-4">
             
@@ -35,7 +35,7 @@ export default function Contact() {
               className="flex items-center gap-4 text-white/60 hover:text-violet-400 transition-colors group"
             >
               <span className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-violet-500/40 transition-colors">
-                ✉
+                ?
               </span>
               pritomdas@example.com
             </a>
@@ -46,7 +46,7 @@ export default function Contact() {
               className="flex items-center gap-4 text-white/60 hover:text-violet-400 transition-colors group"
             >
               <span className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-violet-500/40 transition-colors">
-                ⌥
+                ?
               </span>
               github.com/pritomdas01
             </a>
