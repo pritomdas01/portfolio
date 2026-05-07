@@ -1,12 +1,14 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const links = ['About', 'Projects', 'Collaborate', 'Contact'];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const { scrollY } = useScroll();
+  const navBg = useTransform(scrollY, [0, 80], ['rgba(5,5,5,0)', 'rgba(5,5,5,0.85)']);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -19,15 +21,21 @@ export default function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        scrolled
-          ? 'backdrop-blur-xl bg-black/40 border-b border-white/5'
-          : 'bg-transparent'
-      }`}
+      style={{ backgroundColor: navBg }}
+      className="fixed top-0 left-0 right-0 z-40 backdrop-blur-xl"
     >
+      {/* violet glow line at bottom instead of white border */}
+      <motion.div
+        className="absolute bottom-0 left-0 right-0 h-px"
+        style={{
+          background: 'linear-gradient(90deg, transparent, rgba(139,92,246,0.4), transparent)',
+          opacity: useTransform(scrollY, [0, 80], [0, 1]),
+        }}
+      />
+
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <motion.span
-          className="text-lg font-bold tracking-tight"
+          className="text-lg font-bold tracking-tight cursor-pointer"
           whileHover={{ scale: 1.05 }}
         >
           <span className="text-white">pritom</span>

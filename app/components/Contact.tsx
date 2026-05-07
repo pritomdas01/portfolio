@@ -91,15 +91,15 @@ export default function Contact() {
       </div>
 
       {/* Footer */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.5 }}
-        className="mt-32 pt-8 border-t border-white/[0.05] text-center text-white/20 text-sm"
-      >
-        Designed & Built by Pritom Das © 2026
-      </motion.div>
-    </section>
-  );
-}
+<motion.div
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true }}
+  transition={{ delay: 0.5 }}
+  className="mt-32 pt-8 border-t border-white/[0.05] text-center"
+>
+  <span className="text-white/20 text-sm">made by </span>
+  <span className="text-violet-400 font-semibold tracking-wide">pritom</span>
+  <span className="text-violet-400">.</span>
+</motion.div>
+
