@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 export default function Contact() {
   return (
     <section id="contact" className="py-32 px-6 max-w-6xl mx-auto">
+      {/* হেডিং সেকশন */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -19,6 +20,7 @@ export default function Contact() {
       </motion.div>
 
       <div className="grid md:grid-cols-2 gap-12 items-start">
+        {/* বাম পাশ - কন্টাক্ট ইনফো */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -29,30 +31,35 @@ export default function Contact() {
           <p className="text-white/50 text-lg leading-relaxed">
             Have a project in mind or want to collaborate? Drop me a message and I will get back to you soon.
           </p>
+          
           <div className="space-y-4">
-            
+            {/* ইমেল লিঙ্ক ঠিক করা হয়েছে */}
+            <a
               href="mailto:pritomdas@example.com"
               className="flex items-center gap-4 text-white/60 hover:text-violet-400 transition-colors group"
             >
               <span className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-violet-500/40 transition-colors">
-                ?
+                ✉️
               </span>
               pritomdas@example.com
             </a>
             
+            {/* গিটহাব লিঙ্ক ঠিক করা হয়েছে */}
+            <a
               href="https://github.com/pritomdas01"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 text-white/60 hover:text-violet-400 transition-colors group"
             >
               <span className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-violet-500/40 transition-colors">
-                ?
+                🐙
               </span>
               github.com/pritomdas01
             </a>
           </div>
         </motion.div>
 
+        {/* ডান পাশ - মেসেজ ফর্ম */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -85,6 +92,7 @@ export default function Contact() {
         </motion.div>
       </div>
 
+      {/* ফুটার */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
