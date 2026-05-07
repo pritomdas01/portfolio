@@ -19,7 +19,6 @@ export default function Contact() {
       </motion.div>
 
       <div className="grid md:grid-cols-2 gap-12 items-start">
-        {/* Left Side - Info */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -31,9 +30,8 @@ export default function Contact() {
             Have a project in mind or want to collaborate? Drop me a message and I'll get back to you soon.
           </p>
           <div className="space-y-4">
-            {/* Email Link Fixed */}
-            <a
-              href="mailto:pritomdas@example.com" 
+            
+              href="mailto:pritomdas@example.com"
               className="flex items-center gap-4 text-white/60 hover:text-violet-400 transition-colors group"
             >
               <span className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-violet-500/40 transition-colors">
@@ -42,8 +40,6 @@ export default function Contact() {
               pritomdas@example.com
             </a>
             
-            {/* GitHub Link Fixed */}
-            <a
               href="https://github.com/pritomdas01"
               target="_blank"
               rel="noopener noreferrer"
@@ -57,7 +53,6 @@ export default function Contact() {
           </div>
         </motion.div>
 
-        {/* Right Side - Form */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -90,16 +85,17 @@ export default function Contact() {
         </motion.div>
       </div>
 
-      {/* Footer */}
-<motion.div
-  initial={{ opacity: 0 }}
-  whileInView={{ opacity: 1 }}
-  viewport={{ once: true }}
-  transition={{ delay: 0.5 }}
-  className="mt-32 pt-8 border-t border-white/[0.05] text-center"
->
-  <span className="text-white/20 text-sm">made by </span>
-  <span className="text-violet-400 font-semibold tracking-wide">pritom</span>
-  <span className="text-violet-400">.</span>
-</motion.div>
-
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.5 }}
+        className="mt-32 pt-8 border-t border-white/[0.05] text-center"
+      >
+        <span className="text-white/20 text-sm">made by </span>
+        <span className="text-violet-400 font-semibold tracking-wide">pritom</span>
+        <span className="text-violet-400">.</span>
+      </motion.div>
+    </section>
+  );
+}
